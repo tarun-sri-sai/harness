@@ -1,10 +1,7 @@
 services:
-  pi-container:
-    command: pi
-    build:
-      context: .
-      dockerfile: Dockerfile
+  harness:
+    hostname: harness
+    image: ghcr.io/anomalyco/opencode:1.18.32
     volumes:
-      - ${PI_AGENT_DIR}:/root/.pi/agent
       - ${PWD}:/app
     working_dir: /app
