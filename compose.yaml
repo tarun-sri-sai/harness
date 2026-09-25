@@ -1,8 +1,0 @@
-services:
-  harness:
-    hostname: harness
-    image: ghcr.io/anomalyco/opencode:2.0.14
-    volumes:
-      - ${CONFIG_DIR}:/root/.config/opencode
-      - ${PWD}:/app
-    working_dir: /app
